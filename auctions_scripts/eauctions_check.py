@@ -7,6 +7,7 @@ urls = ['https://www.eauctionsindia.com/house-auctions-in-chengalpattu',
         'https://www.eauctionsindia.com/house-auctions-in-chennai', 'https://www.eauctionsindia.com/house-auctions-in-kanchipuram', 'https://www.eauctionsindia.com/house-auctions-in-thiruvallur']
 # urls = ['https://www.eauctionsindia.com/house-auctions-in-chengalpattu']
 flat_list = [' flat ', ' flat ', ' flat:', ' apartment ']
+symbolic_list = [' Symbolic ']
 
 op_list = []
 MAX = 9000000
@@ -62,3 +63,9 @@ for u in urls:
 
 for ln in op_list:
     print(ln)
+
+print("eaucitons_check")
+print(datetime.now())
+
+print("\n\n\n\n")
+print("===================================================")

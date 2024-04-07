@@ -34,10 +34,10 @@ hdrs = {
 my_districts = ['CHENNAI', 'KANCHEEPURAM', 'VELLORE', 'THIRUVALLUR', 'TIRUVANNAMALAI', ]
 flat_list = [' flat ', ',flat ', '-flat-', 'flats-', ' apartment ', ' apartment-', 'flat-']
 
-monthly_dts = [{"key_val": [["State", "'TN'"], ["period", "'202402'"]]},
-               {"key_val": [["State", "'TN'"], ["period", "'202403'"]]}]
+monthly_dts = [{"key_val": [["State", "'TN'"], ["period", "'202404'"]]},
+               {"key_val": [["State", "'TN'"], ["period", "'202405'"]]}]
 
-monthly_dts = [{"key_val": [["State", "'TN'"], ["period", "'202402'"]]}]
+# monthly_dts = [{"key_val": [["State", "'TN'"], ["period", "'202403'"]]}]
 
 
 
@@ -52,6 +52,9 @@ try:
         if resp.status_code == 200:
 
             op = resp.json().get('d')
+
+            if op is None:
+                continue
 
             op = (op.replace('\\"', '"').replace(' id="btn_view" style="', " id='btn_view' style='")
                   .replace(':bold"', ":bold'").replace("\\'", "'"))
@@ -107,3 +110,10 @@ print()
 print()
 for ln in op_list:
     print(ln)
+
+print()
+print("ib_api_auction")
+print(datetime.now())
+
+print("\n\n\n\n")
+print("===================================================")

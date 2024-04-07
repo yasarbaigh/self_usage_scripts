@@ -1,12 +1,13 @@
 import time
 
 import requests
+from datetime import datetime
 
-
-districts = ['', 'KANCHIPURAM', 'Chennai', 'Chennai-III', 'Ambattur', 'TIRUVALLUR', 'Thiruvallur', 'Chengalpattu']
-url = "https://www.bankeauctions.com/home/liveAuctionDatatable//?reservePriceMaxRange=7000000&reservePriceMinRange=0&state=24&propertytype=0"
-form_data = {'user': 'value', "sEcho":"", "iColumns":"", "sColumns":"", "iDisplayStart" :"0", "iDisplayLength":"200"}
-
+districts = ['', 'KANCHIPURAM', 'Chennai', 'Chennai-III', 'Ambattur', 'TIRUVALLUR', 'Thiruvallur', 'Chengalpattu',
+             'Guduvancheri', 'Pallavaram Kancheepuram', 'Avadi']
+url = "https://www.bankeauctions.com/home/liveAuctionDatatable//?reservePriceMaxRange=10000000&reservePriceMinRange=0&state=24&propertytype=0"
+form_data = {'user': 'value', "sEcho": "", "iColumns": "", "sColumns": "", "iDisplayStart": "0",
+             "iDisplayLength": "200"}
 
 all_districts = set()
 
@@ -23,8 +24,9 @@ while count <= total_count:
         for item in props:
             if ' flat ' in item[3] or ' Flat ' in item[3] or ' apartment  ' in item[3] or ' Apartment  ' in item[3]:
                 continue
-            elif item[4] in districts or 'hennai' in item[4] :
-                print("{}\t{}\thttps://www.bankeauctions.com/{}\t{}\t{}".format(item[2], item[4], item[10], item[5], item[7])  )
+            elif item[4] in districts or 'hennai' in item[4]:
+                print("{}\t{}\thttps://www.bankeauctions.com/{}\t{}\t{}".format(item[2], item[4], item[10], item[5],
+                                                                                item[7]))
             all_districts.add(item[4])
     else:
         pass
@@ -35,4 +37,13 @@ while count <= total_count:
     pass
 
 print("\n\n")
+print()
+print("bank_auciton")
+
+print(datetime.now())
 print(all_districts)
+
+
+
+print("\n\n\n\n")
+print("===================================================")
