@@ -34,8 +34,8 @@ hdrs = {
 my_districts = ['CHENNAI', 'KANCHEEPURAM', 'VELLORE', 'THIRUVALLUR', 'TIRUVANNAMALAI', ]
 flat_list = [' flat ', ',flat ', '-flat-', 'flats-', ' apartment ', ' apartment-', 'flat-']
 
-monthly_dts = [{"key_val": [["State", "'TN'"], ["period", "'202404'"]]},
-               {"key_val": [["State", "'TN'"], ["period", "'202405'"]]}]
+monthly_dts = [{"key_val": [["State", "'TN'"], ["period", "'202411'"]]},
+               {"key_val": [["State", "'TN'"], ["period", "'202412'"]]}]
 
 # monthly_dts = [{"key_val": [["State", "'TN'"], ["period", "'202403'"]]}]
 

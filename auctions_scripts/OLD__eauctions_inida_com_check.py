@@ -5,7 +5,7 @@ import requests
 
 urls = ['https://www.eauctionsindia.com/house-auctions-in-chengalpattu',
         'https://www.eauctionsindia.com/house-auctions-in-chennai', 'https://www.eauctionsindia.com/house-auctions-in-kanchipuram', 'https://www.eauctionsindia.com/house-auctions-in-thiruvallur']
-# urls = ['https://www.eauctionsindia.com/house-auctions-in-chengalpattu']
+urls = ['https://www.eauctionsindia.com/house-auctions-in-chengalpattu']
 flat_list = [' flat ', ' flat ', ' flat:', ' apartment ']
 symbolic_list = [' Symbolic ']
 
@@ -17,7 +17,8 @@ for u in urls:
     print("\n\n Checking for " + u + "\n\n")
     while i < 500:
 
-        crnt = "{}{}{}".format(u, "?page=", pg)
+        # crnt = "{}{}{}".format(u, "?page=", pg)   # Old-url
+        crnt = "{}{}{}".format(u, "/", pg)
         resp = requests.get(crnt, verify=False)
         if resp.status_code == 200:
 

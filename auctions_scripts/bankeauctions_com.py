@@ -4,7 +4,7 @@ import requests
 from datetime import datetime
 
 districts = ['', 'KANCHIPURAM', 'Chennai', 'Chennai-III', 'Ambattur', 'TIRUVALLUR', 'Thiruvallur', 'Chengalpattu',
-             'Guduvancheri', 'Pallavaram Kancheepuram', 'Avadi']
+             'Guduvancheri', 'Pallavaram Kancheepuram', 'Avadi', 'Chengelpet Taluk']
 url = "https://www.bankeauctions.com/home/liveAuctionDatatable//?reservePriceMaxRange=10000000&reservePriceMinRange=0&state=24&propertytype=0"
 form_data = {'user': 'value', "sEcho": "", "iColumns": "", "sColumns": "", "iDisplayStart": "0",
              "iDisplayLength": "200"}
